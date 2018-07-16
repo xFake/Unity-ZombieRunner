@@ -30,4 +30,8 @@ public class ClearArea : MonoBehaviour {
         collisionCount--;
         timeSinceExit = Time.time;
     }
+
+    public bool getSpotSelected() {
+        return spotSelected;
+    }
 }

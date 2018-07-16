@@ -18,15 +18,9 @@ public class InnerVoice : MonoBehaviour {
 
     public void OnFindClearArea()
     {
-        print(name + " OnFindClearArea");
         audioSource.clip = areaClear;
         audioSource.Play();
-
-        Invoke("CallHeli", areaClear.length + 1);
+        SendMessageUpwards("SelectSpot");
     }
 
-    public void CallHeli() {
-        SendMessageUpwards("OnMakeInitialHeliCall");
-        SendMessageUpwards("DropFlare");
-    }
 }
