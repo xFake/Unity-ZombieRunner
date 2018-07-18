@@ -12,7 +12,6 @@ public class ClearArea : MonoBehaviour {
 
     private void Update()
     {
-
         if (collisionCount == 1 && Time.time > timeSinceExit + 1 && spotSelected == false && Time.time >10f )
         {
             spotSelected = true;

@@ -6,15 +6,25 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour{
 
     public GameObject heliCallText;
+    
+    public void StartText(bool spotSelected){
+        if (spotSelected){
+            StartCoroutine("BlinkText");
+        }
+        else {
+            StopCoroutine("BlinkText");
+            heliCallText.SetActive(false);
+        }
+    }
 
-    public IEnumerator BlinkText(bool spotSelected)
-    {
-        while (spotSelected == true)
-        {
+    private IEnumerator BlinkText(){
+        while (true){
             heliCallText.SetActive(true);
             yield return new WaitForSeconds(.5f);
             heliCallText.SetActive(false);
-            yield return new WaitForSeconds(.5f);// something wrong test it !!
+            yield return new WaitForSeconds(.5f);
         }
     }
+
+
 }
