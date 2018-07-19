@@ -7,7 +7,7 @@ public class ClearArea : MonoBehaviour {
 
     private int collisionCount = 0;
     private float timeSinceExit;
-    private bool spotSelected = false;
+    private static bool spotSelected = false;
 
 
     private void Update()
@@ -28,9 +28,5 @@ public class ClearArea : MonoBehaviour {
     {
         collisionCount--;
         timeSinceExit = Time.time;
-    }
-
-    public bool getSpotSelected() {
-        return spotSelected;
     }
 }

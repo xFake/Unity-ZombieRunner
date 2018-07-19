@@ -121,7 +121,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 36062061}
-  - component: {fileID: 36062062}
   m_Layer: 0
   m_Name: Spawn Point (3)
   m_TagString: Untagged
@@ -136,25 +135,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 36062060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 196, y: 125, z: 218}
+  m_LocalPosition: {x: 196, y: 125.62, z: 218}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 259199799}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &36062062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 36062060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1
 --- !u!1 &36096607
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +281,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 193118980}
-  - component: {fileID: 193118981}
   m_Layer: 0
   m_Name: Spawn Point (1)
   m_TagString: Untagged
@@ -310,23 +295,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193118979}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 351.6, y: 125, z: 532.56}
+  m_LocalPosition: {x: 351.6, y: 125.05, z: 532.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2121451376}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &193118981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 193118979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92004dbbd6c1eeb40b03eefde2660707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &259199798
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +309,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 259199799}
+  - component: {fileID: 259199800}
   m_Layer: 0
   m_Name: Zombie Spawn Points
   m_TagString: Untagged
@@ -363,6 +338,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &259199800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 259199798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 1468170504830030, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+  maxZombieCount: 10
 --- !u!1 &499102818
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +421,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 529746270}
-  - component: {fileID: 529746271}
   m_Layer: 0
   m_Name: Spawn Point (2)
   m_TagString: Untagged
@@ -454,19 +441,6 @@ Transform:
   m_Father: {fileID: 259199799}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &529746271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 529746269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1
 --- !u!1 &609112749
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +753,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &703952240
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 501.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 122.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 489
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714027936626832, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 136592551386287510, guid: 7d853d97568f05b44932dbf0cda5abac,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195009742914060956, guid: 7d853d97568f05b44932dbf0cda5abac,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136592551386287510, guid: 7d853d97568f05b44932dbf0cda5abac,
+        type: 2}
+      propertyPath: m_Height
+      value: 1.9681553
+      objectReference: {fileID: 0}
+    - target: {fileID: 136592551386287510, guid: 7d853d97568f05b44932dbf0cda5abac,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.98407763
+      objectReference: {fileID: 0}
+    - target: {fileID: 136592551386287510, guid: 7d853d97568f05b44932dbf0cda5abac,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7d853d97568f05b44932dbf0cda5abac, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &767415141
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +828,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 767415142}
-  - component: {fileID: 767415143}
   m_Layer: 0
   m_Name: Spawn Point (7)
   m_TagString: Untagged
@@ -808,19 +848,6 @@ Transform:
   m_Father: {fileID: 259199799}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &767415143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 767415141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1
 --- !u!1001 &854418476
 Prefab:
   m_ObjectHideFlags: 0
@@ -865,6 +892,11 @@ Prefab:
       propertyPath: m_Center.y
       value: 15.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114240511867121118, guid: ac900dbc36e2ae2458bdb9cba4b5a8c2,
+        type: 2}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 1523563291}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac900dbc36e2ae2458bdb9cba4b5a8c2, type: 2}
   m_IsPrefabParent: 0
@@ -1203,7 +1235,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1103333067}
-  - component: {fileID: 1103333068}
   m_Layer: 0
   m_Name: Spawn Point (4)
   m_TagString: Untagged
@@ -1224,19 +1255,6 @@ Transform:
   m_Father: {fileID: 259199799}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1103333068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1103333066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1
 --- !u!1 &1120039642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1341,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 36096608}
+  - {fileID: 1523563290}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1339,7 +1358,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1141906922}
-  - component: {fileID: 1141906923}
   m_Layer: 0
   m_Name: Spawn Point (3)
   m_TagString: Untagged
@@ -1354,23 +1372,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1141906921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 385, y: 125, z: 226.9}
+  m_LocalPosition: {x: 385, y: 125.57, z: 226.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2121451376}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1141906923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1141906921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92004dbbd6c1eeb40b03eefde2660707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1348297947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,7 +1386,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1348297948}
-  - component: {fileID: 1348297949}
   m_Layer: 0
   m_Name: Spawn Point (8)
   m_TagString: Untagged
@@ -1400,24 +1406,85 @@ Transform:
   m_Father: {fileID: 259199799}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1348297949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348297947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1
 --- !u!4 &1397004873 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4774260223570002, guid: ac900dbc36e2ae2458bdb9cba4b5a8c2,
     type: 2}
   m_PrefabInternal: {fileID: 854418476}
+--- !u!1 &1523563289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1523563290}
+  - component: {fileID: 1523563292}
+  - component: {fileID: 1523563291}
+  m_Layer: 5
+  m_Name: HealthText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1523563290
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1523563289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1120039646}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 395.1, y: -195.2}
+  m_SizeDelta: {x: 193.9, y: 49.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1523563291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1523563289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5702f318dd82e1f44a6edf062d03f471, type: 3}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Health:'
+--- !u!222 &1523563292
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1523563289}
 --- !u!1 &1671637415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1493,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1671637416}
-  - component: {fileID: 1671637417}
   m_Layer: 0
   m_Name: Spawn Point (2)
   m_TagString: Untagged
@@ -1441,23 +1507,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1671637415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 721, y: 127.78, z: 686.7}
+  m_LocalPosition: {x: 721, y: 128.74, z: 686.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2121451376}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1671637417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1671637415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92004dbbd6c1eeb40b03eefde2660707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1797054502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,7 +1562,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1820946912}
-  - component: {fileID: 1820946913}
   m_Layer: 0
   m_Name: Spawn Point (4)
   m_TagString: Untagged
@@ -1522,23 +1576,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1820946911}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 735.29, y: 125, z: 289}
+  m_LocalPosition: {x: 731.34, y: 127.03, z: 289}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2121451376}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1820946913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1820946911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92004dbbd6c1eeb40b03eefde2660707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1836980951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1590,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1836980952}
-  - component: {fileID: 1836980953}
   m_Layer: 0
   m_Name: Spawn Point (6)
   m_TagString: Untagged
@@ -1568,19 +1610,6 @@ Transform:
   m_Father: {fileID: 259199799}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1836980953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1836980951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1
 --- !u!1 &2047037165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1618,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2047037166}
-  - component: {fileID: 2047037167}
   m_Layer: 0
   m_Name: Spawn Point (5)
   m_TagString: Untagged
@@ -1610,19 +1638,6 @@ Transform:
   m_Father: {fileID: 259199799}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2047037167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2047037165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1
 --- !u!1 &2121451375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1646,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2121451376}
+  - component: {fileID: 2121451377}
   m_Layer: 0
   m_Name: Player Spawn Points
   m_TagString: Untagged
@@ -1655,6 +1671,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2121451377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2121451375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92004dbbd6c1eeb40b03eefde2660707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1790191371075988, guid: ac900dbc36e2ae2458bdb9cba4b5a8c2, type: 2}
 --- !u!1 &2139560036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,7 +1691,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2139560037}
-  - component: {fileID: 2139560038}
   m_Layer: 0
   m_Name: Spawn Point (1)
   m_TagString: Untagged
@@ -1684,16 +1711,3 @@ Transform:
   m_Father: {fileID: 259199799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2139560038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2139560036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69a29eccc690a049bd223d29b5f5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombie: {fileID: 1516812459567612, guid: 106aadf249d86c1439b362e0fcb8dd21, type: 2}
-  maxZombieCount: 1

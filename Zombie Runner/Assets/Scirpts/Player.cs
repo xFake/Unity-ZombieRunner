@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ZombieRunner
 {
@@ -10,29 +11,24 @@ namespace ZombieRunner
         public GameObject landingArea;
         public int hitPoints = 100;
 
-        private bool reSpawn = false;
+        private Text healthText;
         private bool spotSelected = false;
-        private Spawner[] spawnPoints;
         private AudioSource innerVoiceAS;
         private Vector3 landingSpot;
         private Quaternion landingRotation;
         private GameManager gameManager;
+        private Spawner spawner;
 
         void Start()
         {
-            spawnPoints = FindObjectsOfType<Spawner>();
             gameManager = FindObjectOfType<GameManager>();
+            spawner = FindObjectOfType<Spawner>();
+            healthText = GameObject.Find("HealthText").GetComponent<Text>();
+            healthText.text += hitPoints.ToString();
         }
 
         void Update()
         {
-            if (reSpawn == true)
-            {
-                Invoke("ReSpawn", 10f);
-                // to do some counting so the player will know when spawn happens
-                reSpawn = false;
-            }
-
             if (Input.GetButton("CallHeli") && spotSelected == true)
             {
                 Instantiate(landingArea, landingSpot, landingRotation);
@@ -42,12 +38,7 @@ namespace ZombieRunner
             }
         }
 
-        private void ReSpawn()
-        {
-            int spawner;
-            spawner = Random.Range(0, spawnPoints.Length);
-            transform.position = spawnPoints[spawner].transform.position;
-        }
+
 
         public void SelectSpot()
         {
@@ -57,12 +48,14 @@ namespace ZombieRunner
             gameManager.StartText(spotSelected);
         }
 
-        public void DamageTaken()
+        public void TakeDamage(int damageTaken)
         {
+            hitPoints -= damageTaken;
+            healthText.text = hitPoints.ToString();
             if (hitPoints <= 0)
             {
                 Destroy(gameObject);
-                reSpawn = true;
+                spawner.ReSpawn();
             }
         }
     }

@@ -5,14 +5,14 @@ using UnityEngine;
 public class ZombieSpawner : MonoBehaviour {
 
     public GameObject zombie;
-    public int maxZombieCount = 100;
+    public int maxZombieCount = 100; 
 
     private int zombieCount = 0;
-    private ZombieSpawner[] zombieSpawnPoints;
+    private Transform[] zombieSpawnPoints;
     private float lastZombieSpawnTime;
 
     void Start () {
-        zombieSpawnPoints = FindObjectsOfType<ZombieSpawner>();
+        zombieSpawnPoints = GetComponentsInChildren<Transform>();
     }
 
     void Update () {
@@ -25,10 +25,9 @@ public class ZombieSpawner : MonoBehaviour {
     public void SpawnZombie()
     {
         int spawner;
-        spawner = Random.Range(0, zombieSpawnPoints.Length);
-        Vector3 spawnerPosition = zombieSpawnPoints[spawner].transform.position;
-        GameObject newZombie = Instantiate(zombie, spawnerPosition, Quaternion.identity);
-        newZombie.transform.parent = gameObject.transform;
+        spawner = Random.Range(1, zombieSpawnPoints.Length);
+        GameObject newZombie = Instantiate(zombie, zombieSpawnPoints[spawner].transform.position, Quaternion.identity);
+        newZombie.transform.parent = zombieSpawnPoints[spawner].transform;
         zombieCount++;
         lastZombieSpawnTime = Time.time;
     }
