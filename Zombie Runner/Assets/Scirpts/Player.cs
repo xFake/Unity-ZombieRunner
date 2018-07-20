@@ -8,11 +8,11 @@ namespace ZombieRunner
     public class Player : MonoBehaviour
     {
 
-        public GameObject landingArea;
         public int hitPoints = 100;
+        public GameObject landingArea;
 
-        private Text healthText;
         private bool spotSelected = false;
+        private Text healthText;
         private AudioSource innerVoiceAS;
         private Vector3 landingSpot;
         private Quaternion landingRotation;
@@ -38,8 +38,6 @@ namespace ZombieRunner
             }
         }
 
-
-
         public void SelectSpot()
         {
             landingSpot = transform.position;
@@ -57,6 +55,10 @@ namespace ZombieRunner
                 Destroy(gameObject);
                 spawner.ReSpawn();
             }
+        }
+
+        public Vector3 GetLandingSpot() {
+            return landingSpot;
         }
     }
 }
